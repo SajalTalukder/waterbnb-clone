@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .icon {
+    @apply h-6 w-6 cursor-pointer;
+  }
+  .country {
+    @apply text-lg font-semibold;
+  }
+  .footerLink {
+    @apply text-sm mt-3 text-gray-700 cursor-pointer;
+  }
+}
