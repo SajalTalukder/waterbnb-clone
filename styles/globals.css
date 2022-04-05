@@ -12,4 +12,7 @@
   .footerLink {
     @apply text-sm mt-3 text-gray-700 cursor-pointer;
   }
+  .btn {
+    @apply p-2 px-3 border-[1px] rounded-full font-semibold text-sm hover:shadow-md active:scale-95 transform transition duration-100;
+  }
 }
