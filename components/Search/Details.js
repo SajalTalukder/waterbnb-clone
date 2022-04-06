@@ -2,14 +2,14 @@ import React from "react";
 import { searchResult } from "../Data/Data";
 import SearchCard from "./SearchCard";
 import { useRouter } from "next/router";
-import { format } from "date-fns";
+import { formateDate } from "../../components/Helper/Helper";
 
 const Details = () => {
   const router = useRouter();
   const { location, startDate, endDate, guest } = router.query;
-  const formatedStartDate = format(new Date(startDate), "dd MMM yy");
-  const formatedEndDate = format(new Date(endDate), "dd MMM yy");
-  const range = `${formatedStartDate} - ${formatedEndDate}`;
+  const formatedStartDate = formateDate(startDate);
+  const formatedEndDate = formateDate(endDate);
+  const range = `${formatedStartDate} To ${formatedEndDate}`;
   return (
     <>
       <div className="mr-5">

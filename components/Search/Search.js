@@ -4,14 +4,14 @@ import Details from "./Details";
 
 import Footer from "../../components/Home/Footer/Footer";
 import { useRouter } from "next/router";
-import { format } from "date-fns";
+import { formateDate } from "../../components/Helper/Helper";
 const Search = () => {
   const router = useRouter();
   const { location, startDate, endDate, guest } = router.query;
   console.log(startDate);
-  const formatedStartDate = format(new Date(startDate), "dd MMM yy");
-  const formatedEndDate = format(new Date(endDate), "dd MMM yy");
-  const range = `${formatedStartDate} - ${formatedEndDate}`;
+  const formatedStartDate = formateDate(startDate);
+  const formatedEndDate = formateDate(endDate);
+  const range = `${formatedStartDate} To ${formatedEndDate}`;
   const placeHolderText = `${location} | ${range} | ${guest} guests`;
   return (
     <div>
