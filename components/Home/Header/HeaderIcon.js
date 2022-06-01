@@ -1,7 +1,7 @@
 import React from "react";
-import { getSession, signOut, useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 
-import { GlobeAltIcon, MenuIcon, UserCircleIcon } from "@heroicons/react/solid";
+import { GlobeAltIcon, MenuIcon } from "@heroicons/react/solid";
 const HeaderIcon = () => {
   const { data: session } = useSession();
   console.log(session?.user?.image);
@@ -20,7 +20,7 @@ const HeaderIcon = () => {
               onClick={() => {
                 signOut();
               }}
-              className="h-6 w-6 cursor-pointer rounded-full"
+              className="h-6 w-6 object-contain cursor-pointer rounded-full"
             />
           </div>
         )}

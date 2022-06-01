@@ -11,8 +11,8 @@ const SearchCard = ({
   location,
 }) => {
   return (
-    <div className="flex border-b-[1px] items-center space-x-6 mb-5 rounded-lg hover:bg-gray-100 hover:scale-105 transform hover:shadow-md transition duration-300 p-2 py-3 ">
-      <div className="relative w-40 h-24 md:h-52 md:w-80 flex-shrink-0 ">
+    <div className="flex flex-col md:flex-row border-b-[1px] items-center space-x-6 mb-10 md:md-5 space-y-6 md:space-y-0 rounded-lg hover:bg-gray-100 hover:scale-105 transform hover:shadow-md transition duration-300 p-2 py-3 ">
+      <div className="relative w-40 h-32 sm:w-80 sm:h-34 md:h-52 md:w-80 flex-shrink-0 ">
         <Image
           src={img}
           layout="fill"

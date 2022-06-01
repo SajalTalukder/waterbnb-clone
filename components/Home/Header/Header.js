@@ -58,7 +58,7 @@ const Header = ({ placeholder }) => {
       </div>
 
       {inputValue && (
-        <div className="w-[100%] md:w-[50%] mx-auto mt-7 mb-7">
+        <div className="w-[100%] overflow-x-scroll md:overflow-x-hidden md:w-[70%] mx-auto mt-7 pb-7">
           <DateRangePicker
             minDate={new Date()}
             rangeColors={["#FD5B61"]}
@@ -66,7 +66,7 @@ const Header = ({ placeholder }) => {
             onChange={handleSelect}
           />
           <div className="flex justify-between items-center w-[83%] border-b-[1px] mt-5 mb-5">
-            <div className="text-lg font-bold">Number of Guest</div>
+            <div className="text-lg ml-3 font-bold">Number of Guest</div>
             <div className="flex space-x-3 items-center ">
               <UserGroupIcon className="w-6 h-6 text-red-600" />
               <input
